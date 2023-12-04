@@ -6,5 +6,9 @@ console.log(promise);
 
 const question = "Will the weather be nice today?";
 const tellPromise = tell(question);
-
-tellPromise.then(console.log);
+tellPromise
+  .then((fortune) => {
+    console.log(question);
+    console.log(fortune);
+  })
+  .catch(console.error);
